@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>聯絡我們｜LUNÉ</title><style>body{margin:0;background:#faf8f4;color:#4f5148;font:14px/1.8 Arial,"Microsoft JhengHei",sans-serif}*{box-sizing:border-box}a{color:inherit;text-decoration:none}button{cursor:pointer}h2{font-family:Georgia,"PMingLiU",serif;font-weight:400}.logo{font:31px Georgia,serif;letter-spacing:7px}.eyebrow{font:11px Georgia,serif;letter-spacing:3px;color:#798271}.small{font-size:11px}/* Contact footer */
+footer.contact-footer{display:block;background:#e8eddf;padding:65px 6% 25px;border-top:1px solid #d8dfcf;scroll-margin-top:90px}
+.contact-layout{display:grid;grid-template-columns:.9fr 1.3fr;gap:65px;max-width:1180px;margin:auto;align-items:start}
+.contact-intro h2{margin:12px 0 20px;font-size:34px}.contact-intro p{color:#7a8272;max-width:340px}.contact-intro .logo{display:inline-block;margin-top:25px}
+.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:20px;background:#fafbf7;padding:30px;border:1px solid #dce2d4}
+.contact-field{display:flex;flex-direction:column;gap:7px;font-size:13px}.contact-field.full,.contact-actions{grid-column:1/-1}
+.contact-field label{letter-spacing:1px}.contact-field label span{font-size:11px;color:#929b87;margin-left:5px}
+.contact-field input,.contact-field textarea{box-sizing:border-box;width:100%;padding:12px 14px;border:1px solid #d6dccf;border-radius:0;background:#fffefa;color:#4f5148;font:14px/1.7 Arial,'Microsoft JhengHei',sans-serif}
+.contact-field textarea{resize:vertical;min-height:145px}.contact-field input:focus,.contact-field textarea:focus{outline:2px solid #8e9d80;outline-offset:2px}
+.contact-field input::placeholder,.contact-field textarea::placeholder{color:#a0a594}
+.contact-actions{display:flex;flex-direction:column;align-items:flex-start;gap:14px}.contact-actions p{font-size:11px;color:#87907c;margin:0}.contact-submit{min-width:175px;padding:13px 25px;background:#505b47;color:#fff;border:0;font-size:13px;letter-spacing:2px}.contact-submit:hover{background:#718367}.contact-submit:disabled{opacity:.6;cursor:wait}
+.contact-status{grid-column:1/-1;margin:0;padding:13px 15px;background:#e7edde;border:1px solid #cad5be;font-size:13px}.contact-status[hidden],.contact-native[hidden]{display:none}.contact-status[data-state="error"]{background:#f7e9e2;border-color:#d7b9a6;color:#805847}.contact-native{padding:5px 0;border:0;border-bottom:1px solid;background:none;color:#67765c;font:12px Arial,"Microsoft JhengHei",sans-serif;cursor:pointer}
+.contact-footer-bottom{max-width:1180px;margin:40px auto 0;padding-top:20px;border-top:1px solid #cfd8c5;display:flex;justify-content:space-between;gap:18px;font-size:11px;color:#8a937e}
+.contact-honey{display:none!important}
+@media(max-width:700px){footer.contact-footer{padding:40px 5% 22px}.contact-layout{grid-template-columns:1fr;gap:25px}.contact-intro h2{font-size:28px}.contact-form{grid-template-columns:1fr;padding:22px;gap:17px}.contact-field.full,.contact-actions{grid-column:1}.contact-footer-bottom{flex-direction:column;gap:7px}.contact-submit{width:100%}}
+</style></head><body>
+<footer class="contact-footer" id="contact">
+<div class="contact-layout">
+  <div class="contact-intro">
+    <div class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</div>
+    <h2>聯絡我們</h2>
+    <p>關於香氣的選擇、商品的疑問，或是想與我們分享的想法，都歡迎留下訊息。</p>
+    <p>請填寫下方資料，我們收到後會透過您提供的聯絡方式回覆。</p>
+    <a class="logo" href="#" aria-label="LUNÉ 首頁">LUNÉ</a>
+    <p class="small">A SCENT OF YOU · 專屬你的香氛日常</p>
+  </div>
+  <form class="contact-form" id="contactForm" action="https://formspree.io/f/xnppzozg" method="POST" accept-charset="UTF-8">
+    <div class="contact-honey" aria-hidden="true"><label for="contactWebsite">請留空</label><input id="contactWebsite" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+    <p class="contact-status" id="contactStatus" role="status" hidden></p>
+    <div class="contact-field"><label for="contactName">姓名<span>必填</span></label><input id="contactName" name="name" type="text" autocomplete="name" placeholder="請輸入您的姓名" maxlength="80" required></div>
+    <div class="contact-field"><label for="contactPhone">電話<span>必填</span></label><input id="contactPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="例如：0912 345 678" maxlength="30" required></div>
+    <div class="contact-field full"><label for="contactEmail">Email<span>必填</span></label><input id="contactEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required></div>
+    <div class="contact-field full"><label for="contactMessage">聯絡內容<span>必填</span></label><textarea id="contactMessage" name="message" placeholder="請告訴我們您想詢問或分享的內容…" maxlength="5000" rows="5" required></textarea></div>
+    <div class="contact-actions"><p>您提供的姓名與聯絡資料僅用於處理本次詢問；訊息將由 Formspree 轉寄給 LUNÉ。</p><button class="contact-submit" id="contactSubmit" type="submit">送出訊息　→</button><button class="contact-native" id="contactNative" type="submit" hidden>改用寄送頁面</button></div>
+  </form>
+</div>
+<div class="contact-footer-bottom"><span>© <span id="year"></span> LUNÉ. 專屬你的香氛日常。</span><span>品牌概念展示｜商品與價格為示意</span><a href="#">回到頂端 ↑</a></div>
+</footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();
+// Contact form for static hosting, including GitHub Pages.
+(()=>{
+ const form=document.getElementById('contactForm');
+ if(!form)return;
+ const submit=document.getElementById('contactSubmit');
+ const status=document.getElementById('contactStatus');
+ const native=document.getElementById('contactNative');
+ const name=document.getElementById('contactName');
+ const phone=document.getElementById('contactPhone');
+ const message=document.getElementById('contactMessage');
+ let busy=false;
+ function validate(){
+  [name,message].forEach(field=>field.setCustomValidity(field.value.trim()?'':'請填寫此欄位。'));
+  phone.setCustomValidity((phone.value.match(/\d/g)||[]).length>=6?'':'請輸入完整的聯絡電話。');
+  return form.reportValidity();
+ }
+ [name,message].forEach(field=>field.addEventListener('input',()=>field.setCustomValidity(field.value.trim()?'':'請填寫此欄位。')));
+ phone.addEventListener('input',()=>phone.setCustomValidity((phone.value.match(/\d/g)||[]).length>=6?'':'請輸入完整的聯絡電話。'));
+ form.addEventListener('submit',async e=>{
+  if(busy){e.preventDefault();return;}
+  if(!validate()){e.preventDefault();return;}
+  // If a browser or the provider requires its own confirmation page, use native POST.
+  if(e.submitter===native)return;
+  e.preventDefault();
+  busy=true;submit.disabled=true;submit.textContent='正在寄送…';form.setAttribute('aria-busy','true');
+  native.hidden=true;status.hidden=false;status.dataset.state='pending';status.textContent='正在提交您的訊息，請稍候…';
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),30000);
+  try{
+   const data=new FormData(form);
+   data.set('name',name.value.trim());data.set('phone',phone.value.trim());data.set('message',message.value.trim());
+   const response=await fetch(form.action,{method:'POST',body:data,headers:{Accept:'application/json'},signal:controller.signal});
+   const result=await response.json().catch(()=>null);
+   if(!response.ok||!result||result.ok===false||(Array.isArray(result.errors)&&result.errors.length)){
+    status.dataset.state='error';
+    status.textContent=response.status===429?'送出次數較多，請稍後再試。您填寫的內容已保留。':'寄送服務尚未接受這次訊息。您可以重試，或選擇「改用寄送頁面」完成確認。';
+    native.hidden=false;
+    return;
+   }
+   form.reset();[name,phone,message].forEach(field=>field.setCustomValidity(''));
+   status.dataset.state='success';status.textContent='謝謝您的來信，訊息已提交。我們會透過您提供的聯絡方式回覆。';
+  }catch(error){
+   status.dataset.state='error';
+   status.textContent=error.name==='AbortError'?'連線逾時，目前無法確認提交結果。您填寫的內容已保留，請稍後再確認。':'目前無法確認寄送結果，請檢查網路後再試。您填寫的內容已保留。';
+   native.hidden=false;
+  }finally{
+   clearTimeout(timeout);busy=false;submit.disabled=false;submit.textContent='送出訊息　→';form.removeAttribute('aria-busy');
+  }
+ });
+})();
+</script></body></html>
